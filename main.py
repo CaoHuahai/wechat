@@ -86,7 +86,7 @@ def get_birthday(birthday, year, today):
         # 今年生日
         year_date = date(year, birthday_month, birthday_day)
     # 计算生日年份，如果还没过，按当年减，如果过了需要+1
-    if today > year_date+1:
+    if today > year_date:
         if birthday_year[0] == "r":
             # 获取农历明年生日的月和日
             r_last_birthday = ZhDate((year + 1), r_mouth, r_day).to_datetime().date()
